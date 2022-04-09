@@ -5,8 +5,8 @@ public class Main {
 
 
         OnTaskDoneListener listener = System.out::println;
-
-        Worker worker = new Worker(listener);
+        OnTaskErrorListener errorListener = System.out::println;
+        Worker worker = new Worker(listener,errorListener);
         worker.start();
 
     }
